@@ -1,0 +1,8 @@
+Se realizó un mapa de colores.
+Se crearon mixins aprovechando el mapa creado (para color y background-color).
+Se utilizó los mixins en los lugares correspondientes.
+Se utilizó extend para extender la clase titleSection en todas las
+páginas en las que se requirió.
+Se agregó los metas correspondientes a description y keywords en 
+todas las páginas.
+Se diferenció cada title de cada página.
