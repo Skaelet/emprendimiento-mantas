@@ -1,0 +1,20 @@
+@mixin disable-select () {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently supported by any browser but < IE9 */
+}
+
+@mixin color-inverter ($color, $color-background){
+    color: $color-background;
+    background-color: $color;
+}
+
+@mixin efect-color-icon (){
+    filter: saturate(0) contrast(0) brightness(70);
+    &:hover{
+        filter: saturate(0.7) contrast(1.1) brightness(1.1);
+    }
+}

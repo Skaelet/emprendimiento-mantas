@@ -1,0 +1,68 @@
+@import "utilities/variables";
+@import "utilities/mixins";
+
+.footer{
+    background-color: $color-black;
+    background-image: linear-gradient(to bottom, $color-black 0%, $color-light-black 95%);
+	color: $color-body;
+
+    .div{
+        margin: 30px;
+        border-top: 1px solid $color-body;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .section{
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            text-align: center;
+            margin: 20px 30px;
+
+            .p{
+                font-size: 16px;
+                font-weight: 100;
+                &::selection{
+                    @include color-inverter($color-body, $color-black);
+                }
+            }
+    
+            .icons{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                @include disable-select();
+
+                .instagram{
+                    @include efect-color-icon ();
+                    order: -40;
+                }
+
+                .whatsapp{
+                    @include efect-color-icon ();
+                    order: -30;
+                }
+
+                .telegram{
+                    @include efect-color-icon ();
+                    order: -20;
+                }
+
+                .correo-electronico{
+                    @include efect-color-icon ();
+                    order: -10;
+                }
+    
+                .img{
+                    margin: 0 10px;
+    
+                    img{
+                        width: 24px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.header{
+    align-items: center;
+    background-color: $color-mostaza;
+    background-image: linear-gradient(to bottom, $color-mostaza 5%, $color-light-mostaza 90%);
+    color: $color-body;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    @include disable-select();
+
+    .name{
+        font-family: $font-logo;
+        font-size: 32px;
+        font-weight: 900;
+        margin: 5px 30px;
+        transition: text-shadow, 0.5s;
+
+        &:hover{
+            text-shadow: $color-body 0 0 5px;
+        }
+    }
+}

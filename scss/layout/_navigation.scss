@@ -1,0 +1,55 @@
+.nav{
+    margin: 0 20px;
+
+    .menu__desktop{
+        margin: 0;
+        padding: 0;
+
+        li{
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 14px 10px;
+            position: relative;
+            transition: background-color, 0.4s;
+
+            .submenu{
+                display: none;
+                left: 0px;
+                padding: 8px;
+                position: absolute;
+                top: 47px;
+
+                li{
+                    width: 125px;
+                    transition: background-color, 0.4s;
+                    padding: 0;
+
+                    a{
+                        display: block;
+                        padding: 14px 10px;
+                    }
+
+                    &:hover{
+                        background-color: $color-mostaza;
+                    }
+                }
+            }
+
+            &:hover{
+                background-color: $color-light-mostaza;
+
+                .submenu{
+                    background-color: $color-light-mostaza;
+                    display: block;
+                    padding: 0;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .menu__smartphone{
+        display: none;
+    }
+}

@@ -1,0 +1,14 @@
+.title{
+    @include disable-select ();
+    width: 100vw;
+    color: $color-white;
+    background-color: $color-light-gray;
+    font-size: 54px;
+    font-weight: 600;
+    font-family: $font-title;
+    letter-spacing: 2px;
+    padding: 45px 0;
+    margin: 100px 0;
+    text-transform: uppercase;
+    text-align: center;
+}

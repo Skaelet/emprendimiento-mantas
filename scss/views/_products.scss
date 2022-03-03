@@ -1,0 +1,90 @@
+.products{
+    align-items: stretch;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	animation: fadeIn 1s ease-in 0.1s none normal;
+	animation-fill-mode: backwards;
+    margin-bottom: 150px;
+
+    .filter{
+        align-items: center;
+        background-color: $color-white;
+        border-radius: 4px;
+        border: 2px solid $color-light-gray;
+        color: $color-gray;
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 150px 10px 15px 10px;
+        padding: 0 20px;
+
+        .titleFilter{
+            align-self: flex-start;
+            font-size: 18px;
+            font-weight: 700;
+            text-align: left;
+            &::selection{
+                background-color: $color-gray;
+                color: $color-white;
+            }
+        }
+
+        .list{
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+
+            li{
+                font-size: 16px;
+                font-weight: 300;
+                margin: 10px 30px;
+                transition: scale, 0.3s;
+                &:hover{
+                    transform: scale(1.05);
+                    color: $color-black;
+                }
+
+                a{
+                    &::selection{
+                        @include color-inverter($color-gray, $color-white);
+                    }
+                }
+            }
+        }
+    }
+
+    .items{
+        align-items: center;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        width: 1080px;
+
+        .titleProducts{
+            border-top: 2px solid $color-mostaza;
+            border-bottom: 2px solid $color-mostaza;
+            color: $color-gray;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            margin: 50px;
+            padding: 0 10px;
+            text-transform: uppercase;
+            &::selection{
+                @include color-inverter($color-gray, $color-white);
+            }
+            b{
+                &::selection{
+                    @include color-inverter($color-gray, $color-white);
+                }
+            }
+        }
+
+        .article{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.aboutUs{
+    align-items: center;
+	color: $color-gray;
+	display: flex;
+	flex-flow: column nowrap;
+	margin: 80px 0;
+	animation: fadeIn 1s ease-in 0.1s none normal;
+	animation-fill-mode: backwards;
+    min-height: 700px;
+    width: 100%;
+
+    .us{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: stretch;
+        margin: 0 0 50px;
+        width: 1080px;
+
+        .img{
+            width: 400px;
+            display: inline-block;
+            img{
+                width: 100%;
+                @include disable-select();
+            }
+        }
+
+        .description{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            justify-content: flex-start;
+            font-size: 18px;
+            font-weight: 300;
+            margin: 25px;
+            text-align: center;
+            width: 450px;
+
+            span{
+                font-size: 48px;
+                margin-bottom: 30px;
+            }
+
+            p{
+                &::selection{
+                    @include color-inverter($color-gray, $color-white);
+                }
+            }
+        }
+    }
+}
