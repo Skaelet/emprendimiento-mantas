@@ -25,7 +25,7 @@
 /*BODY*/
 
 body{
-    background-color: $color-white;
+    background-color: $color-body;
     box-sizing: border-box;
     display: flex;
     font-family: $font-main;
@@ -38,7 +38,7 @@ body{
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
 }
 /*------------------------------------------PAGES------------------------------------------*/
 
@@ -302,8 +302,8 @@ body{
     }
 
     .aboutUs{
-        .section{
-            width: 92vw;
+        .us{
+            width: 100vw;
         }
     }
 
@@ -337,12 +337,6 @@ body{
     .popular{
         .article{
             width:90%;
-        }
-    }
-
-    .aboutUs{
-        .section{
-            width: 92vw;
         }
     }
 
@@ -407,12 +401,6 @@ body{
     .products{
         .filter{
             display: none;
-        }
-    }
-
-    .aboutUs{
-        .section{
-            width: 92vw;
         }
     }
 
@@ -501,6 +489,10 @@ body{
         }
 	}
 
+    .main{
+        margin: 0 0 150px;
+    }
+
     .footer{
         .div{
             flex-flow: column-reverse nowrap;
@@ -516,7 +508,7 @@ body{
 
     .info{
         width: 90vw;
-        margin: 30px 0 20px;
+        margin: 30px 0;
         flex-flow: column nowrap;
         align-items: center;
         article{
@@ -547,6 +539,7 @@ body{
 
     .sections{
         width: 100vw;
+        margin: 50px 0 0;
     }
 
     .title{
@@ -559,6 +552,7 @@ body{
         .article{
             width:90%;
         }
+        margin: 50px 0;
     }
 
     .products{
@@ -590,8 +584,27 @@ body{
     }
 
     .aboutUs{
-        .section{
-            width: 92vw;
+        margin: 0;
+        .us{
+            width: 100%;
+            .description{
+                h3{
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .phrase{
+            margin: 75px 10px;
+            span{
+                font-size: 32px;
+                font-weight: 300;
+            }
         }
     }
 

@@ -4,7 +4,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: stretch;
-    margin: 50px 0 30px;
+    margin: 75px 0;
     border-radius: 5px;
 
     article{
@@ -43,7 +43,7 @@
     overflow: hidden;
     border-radius: 5px;
     cursor: pointer;
-    margin: 50px 0 20px;
+    margin: 75px 0;
 
     .mantas{
         grid-area: mantas;
@@ -106,6 +106,7 @@
 	display: flex;
 	flex-flow: column nowrap;
 	justify-content: center;
+    margin: 75px 0;
 
     .article{
         display: flex;

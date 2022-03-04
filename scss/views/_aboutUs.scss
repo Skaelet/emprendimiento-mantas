@@ -2,12 +2,12 @@
     align-items: center;
 	color: $color-gray;
 	display: flex;
-	flex-flow: column nowrap;
+	flex-flow: column wrap;
+    justify-content: flex-start;
 	margin: 80px 0;
 	animation: fadeIn 1s ease-in 0.1s none normal;
 	animation-fill-mode: backwards;
     min-height: 700px;
-    width: 100%;
 
     .us{
         display: flex;
@@ -15,11 +15,12 @@
         justify-content: space-evenly;
         align-items: stretch;
         margin: 0 0 50px;
-        width: 1080px;
+        width: 80vw;
 
         .img{
             width: 400px;
             display: inline-block;
+            order: 10;
             img{
                 width: 100%;
                 @include disable-select();
@@ -30,23 +31,36 @@
             display: flex;
             flex-flow: column nowrap;
             align-items: center;
-            justify-content: flex-start;
-            font-size: 18px;
+            justify-content: center;
             font-weight: 300;
             margin: 25px;
             text-align: center;
             width: 450px;
+            order: 20;
 
-            span{
+            h3{
                 font-size: 48px;
                 margin-bottom: 30px;
             }
 
             p{
+                font-size: 18px;
                 &::selection{
                     @include color-inverter($color-gray, $color-white);
                 }
             }
+        }
+    }
+
+    .phrase{
+        text-align: center;
+        margin: 100px 20px;
+        padding: 0 10px 15px;
+        border-bottom: 2px solid $color-light-gray;
+        span{
+            font-size: 48px;
+            font-weight: 400;
+            font-family: $font-logo;
         }
     }
 }

@@ -387,10 +387,10 @@ template {
 .footer {
   background-color: #161408;
   background-image: linear-gradient(to bottom, #161408 0%, #252525 95%);
-  color: #F9F4E1; }
+  color: #FDF9E6; }
   .footer .div {
     margin: 30px;
-    border-top: 1px solid #F9F4E1;
+    border-top: 1px solid #FDF9E6;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
@@ -406,7 +406,7 @@ template {
         font-weight: 100; }
         .footer .div .section .p::selection {
           color: #161408;
-          background-color: #F9F4E1; }
+          background-color: #FDF9E6; }
       .footer .div .section .icons {
         display: flex;
         flex-direction: row;
@@ -452,7 +452,7 @@ template {
   align-items: center;
   background-color: #E1C760;
   background-image: linear-gradient(to bottom, #E1C760 5%, #E7D281 90%);
-  color: #F9F4E1;
+  color: #FDF9E6;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -478,7 +478,7 @@ template {
     margin: 5px 30px;
     transition: text-shadow, 0.5s; }
     .header .name:hover {
-      text-shadow: #F9F4E1 0 0 5px; }
+      text-shadow: #FDF9E6 0 0 5px; }
 
 .nav {
   margin: 0 20px; }
@@ -521,22 +521,23 @@ template {
   align-items: center;
   color: #9E9A8A;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   margin: 80px 0;
   animation: fadeIn 1s ease-in 0.1s none normal;
   animation-fill-mode: backwards;
-  min-height: 700px;
-  width: 100%; }
+  min-height: 700px; }
   .aboutUs .us {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: stretch;
     margin: 0 0 50px;
-    width: 1080px; }
+    width: 80vw; }
     .aboutUs .us .img {
       width: 400px;
-      display: inline-block; }
+      display: inline-block;
+      order: 10; }
       .aboutUs .us .img img {
         width: 100%;
         -webkit-touch-callout: none;
@@ -555,18 +556,29 @@ template {
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
-      justify-content: flex-start;
-      font-size: 18px;
+      justify-content: center;
       font-weight: 300;
       margin: 25px;
       text-align: center;
-      width: 450px; }
-      .aboutUs .us .description span {
+      width: 450px;
+      order: 20; }
+      .aboutUs .us .description h3 {
         font-size: 48px;
         margin-bottom: 30px; }
-      .aboutUs .us .description p::selection {
-        color: #FFFFFF;
-        background-color: #9E9A8A; }
+      .aboutUs .us .description p {
+        font-size: 18px; }
+        .aboutUs .us .description p::selection {
+          color: #FFFFFF;
+          background-color: #9E9A8A; }
+  .aboutUs .phrase {
+    text-align: center;
+    margin: 100px 20px;
+    padding: 0 10px 15px;
+    border-bottom: 2px solid #E3DECC; }
+    .aboutUs .phrase span {
+      font-size: 48px;
+      font-weight: 400;
+      font-family: "The Nautigal", cursive; }
 
 .info {
   width: 1080px;
@@ -574,7 +586,7 @@ template {
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: stretch;
-  margin: 50px 0 30px;
+  margin: 75px 0;
   border-radius: 5px; }
   .info article {
     width: 300px;
@@ -602,7 +614,7 @@ template {
   overflow: hidden;
   border-radius: 5px;
   cursor: pointer;
-  margin: 50px 0 20px; }
+  margin: 75px 0; }
   .sections .mantas, .sections .tazas, .sections .mates {
     grid-area: mantas;
     overflow: hidden;
@@ -638,7 +650,7 @@ template {
           opacity: 0; }
       .sections .mantas a p, .sections .tazas a p, .sections .mates a p {
         position: absolute;
-        color: #F9F4E1;
+        color: #FDF9E6;
         background-color: transparent;
         background-image: none; }
       .sections .mantas a .efectoBlur, .sections .tazas a .efectoBlur, .sections .mates a .efectoBlur {
@@ -659,7 +671,8 @@ template {
   align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center; }
+  justify-content: center;
+  margin: 75px 0; }
   .popular .article, .offer .article {
     display: flex;
     flex-flow: row wrap;
@@ -673,7 +686,7 @@ template {
   justify-content: center;
   animation: fadeIn 1s ease-in 0.1s none normal;
   animation-fill-mode: backwards;
-  margin-bottom: 150px; }
+  margin-bottom: 250px; }
   .products .filter {
     align-items: center;
     background-color: #FFFFFF;
@@ -737,7 +750,7 @@ template {
 
 /*BODY*/
 body {
-  background-color: #FFFFFF;
+  background-color: #FDF9E6;
   box-sizing: border-box;
   display: flex;
   font-family: "Nunito", sans-serif;
@@ -748,7 +761,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-bottom: 150px; }
+  margin-bottom: 250px; }
 
 /*------------------------------------------PAGES------------------------------------------*/
 /*HELP - PAGE*/
@@ -864,7 +877,7 @@ body {
         background-color: #E1C760;
         border-radius: 5px;
         border-style: none;
-        color: #F9F4E1;
+        color: #FDF9E6;
         display: block;
         font-size: 20px;
         font-weight: 900;
@@ -877,7 +890,7 @@ body {
           transform: scale(1.05); }
         .contact .article .form .button:active {
           color: #E1C760;
-          background-color: #F9F4E1; }
+          background-color: #FDF9E6; }
     .contact .article .img {
       align-items: center;
       display: flex;
@@ -960,8 +973,8 @@ body {
     width: 100vw; }
   .popular .article, .offer .article {
     width: 90%; }
-  .aboutUs .section {
-    width: 92vw; }
+  .aboutUs .us {
+    width: 100vw; }
   .contact .article {
     width: 80%; }
   .map .article {
@@ -977,8 +990,6 @@ body {
     padding: 30px; }
   .popular .article, .offer .article {
     width: 90%; }
-  .aboutUs .section {
-    width: 92vw; }
   .contact .article {
     width: 80%; }
   .map .article {
@@ -1007,8 +1018,6 @@ body {
     width: 90%; }
   .products .filter {
     display: none; }
-  .aboutUs .section {
-    width: 92vw; }
   .contact .article {
     width: 80%; }
     .contact .article .img {
@@ -1049,14 +1058,16 @@ body {
             padding: 10px 0; }
             .header .nav .menu__smartphone li .submenu li:hover {
               background-color: #E1C760;
-              color: #F9F4E1; }
+              color: #FDF9E6; }
         .header .nav .menu__smartphone li:hover .submenu {
-          background-color: #F9F4E1;
+          background-color: #FDF9E6;
           color: #E1C760;
           display: block;
           left: 0;
           top: 70px;
           width: 100vw; }
+  .main {
+    margin: 0 0 150px; }
   .footer .div {
     flex-flow: column-reverse nowrap;
     align-items: center; }
@@ -1064,7 +1075,7 @@ body {
       line-height: 1.5; }
   .info {
     width: 90vw;
-    margin: 30px 0 20px;
+    margin: 30px 0;
     flex-flow: column nowrap;
     align-items: center; }
     .info article {
@@ -1085,13 +1096,16 @@ body {
           color: #9E9A8A;
           font-size: 14px; }
   .sections {
-    width: 100vw; }
+    width: 100vw;
+    margin: 50px 0 0; }
   .title, .sections .mantas a p, .sections .tazas a p, .sections .mates a p, .help .titleHelp, .contact .titleContact, .map .titleMap {
     font-size: 28px;
     padding: 15px;
     margin: 50px 0; }
-  .popular .article, .offer .article {
-    width: 90%; }
+  .popular, .offer {
+    margin: 50px 0; }
+    .popular .article, .offer .article {
+      width: 90%; }
   .products .filter {
     display: none; }
   .products .items .titleProducts {
@@ -1108,8 +1122,20 @@ body {
     font-weight: 400;
     letter-spacing: 1px;
     margin: 20px 0 10px; }
-  .aboutUs .section {
-    width: 92vw; }
+  .aboutUs {
+    margin: 0; }
+    .aboutUs .us {
+      width: 100%; }
+      .aboutUs .us .description h3 {
+        font-size: 32px;
+        margin-bottom: 20px; }
+      .aboutUs .us .description p {
+        font-size: 14px; }
+    .aboutUs .phrase {
+      margin: 75px 10px; }
+      .aboutUs .phrase span {
+        font-size: 32px;
+        font-weight: 300; }
   .contact .titleContact {
     border-top: 1px solid #E1C760;
     border-bottom: 1px solid #E1C760;
