@@ -40,238 +40,6 @@ body{
     align-items: center;
     margin-bottom: 250px;
 }
-/*------------------------------------------PAGES------------------------------------------*/
-
-/*HELP - PAGE*/
-
-.help{
-    align-items: center;
-	display: flex;
-	flex-flow: column nowrap;	
-	animation: fadeIn 1.2s ease-in 0.1s none normal;
-	animation-fill-mode: backwards;
-
-    .titleHelp{
-        @extend .title;
-    }
-
-    .questions{
-        display: inline-block;
-        margin: 0 5% 200px;
-
-
-        .box{
-            border-bottom: 1px solid $color-gray;
-            margin: 0 5%;
-            padding: 20px;
-            text-align: center;
-            
-            .question{
-                color: $color-gray;
-                font-size: 18px;
-                font-weight: 900;
-                margin: 10px;    
-                &::selection{
-                    @include color-inverter($color-gray, $color-white);
-                }
-            }
-
-            .answer{
-                color: $color-gray;
-                font-size: 16px;
-                font-weight: 500;
-                margin: 10px;
-                &::selection{
-                    @include color-inverter($color-gray, $color-white);
-                }
-            }
-        }
-    }
-}
-
-/*CONTACT - PAGE*/
-
-.contact{
-    color: $color-gray;
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-    align-items: center;
-    width: 100%;
-	animation: fadeIn 1s ease-in 0.1s none normal;
-	animation-fill-mode: backwards;
-
-    .titleContact{
-        @extend .title;
-        margin: 40px;
-    }
-
-    .article{
-        display: flex;
-        flex-flow: row nowrap;
-        width: 1024px;
-        border-radius: 10px;
-        border: 1px solid $color-light-gray;
-        overflow: hidden;
-
-        .form{
-            align-items: center;
-            background-color: $color-light-gray;
-            display: flex;
-            flex-flow: column nowrap;
-            height: 550px;
-            justify-content: space-around;
-            width: 50%;
-
-            .box{
-                display: flex;
-                flex-flow: column nowrap;
-                height: 100px;
-                justify-content: center;
-                width: 90%;
-
-                .lavel{
-                    font-size: 20px;
-                    font-weight: 600;
-                    margin: 15px 0;
-                    &::selection{
-                        @include color-inverter($color-gray, $color-white);
-                    }
-                }
-
-                .input{
-                    border-radius: 5px;
-                    border: 1px solid $color-light-gray;
-                    font-size: 16px;
-                    height: 25px;
-                    width: 100%;
-                    &:focus{
-                        outline: none;
-                        border: 1px solid $color-gray;
-                    }
-                    &::selection{
-                        @include color-inverter($color-gray, $color-white);
-                    }
-                }
-            }
-
-            .box__textarea{
-                display: flex;
-                flex-flow: column nowrap;
-                height: 180px;
-                justify-content: center;
-                width: 90%;
-
-                .lavel{
-                    font-size: 20px;
-                    font-weight: 600;
-                    margin: 15px 0;
-                    &::selection{
-                        @include color-inverter($color-gray, $color-white);
-                    }
-                }
-
-                .textarea{
-                    border-radius: 5px;
-                    border: 1px solid $color-light-gray;
-                    font-size: 16px;
-                    height: 120px;
-                    width: 100%;
-                    &:focus{
-                        outline: none;
-                        border: 1px solid $color-gray;
-                    }
-                    &::selection{
-                        @include color-inverter($color-gray, $color-white);
-                    }
-                }
-            }
-
-            .button{
-                background-color: $color-mostaza;
-                border-radius: 5px;
-                border-style: none;
-                color: $color-body;
-                display: block;
-                font-size: 20px;
-                font-weight: 900;
-                margin: 5px auto 5%;
-                padding: 5px 25%;
-                transition: all, 0.5s;
-
-                &:hover{
-                    cursor: pointer;
-                    background-color: $color-light-mostaza;
-                    transform: scale(1.05);
-                }
-
-                &:active{
-                    @include color-inverter($color-body, $color-mostaza);
-                }
-            }
-        }
-
-        .img{
-            align-items: center;
-            display: flex;
-            flex-flow: column nowrap;
-            width: 50%;
-            background-color: $color-light-gray;
-            @include disable-select();
-    
-            img{
-                margin: auto;
-                width: 50%;
-            }
-        }
-    }
-}
-
-.map{
-    color: $color-gray;
-    @include disable-select();
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-    align-items: center;
-    width: 100%;
-	animation: fadeIn 1s ease-in 0.1s none normal;
-	animation-fill-mode: backwards;
-    margin-bottom: 150px;
-
-    .titleMap{
-        @extend .title;
-        margin: 40px;
-    }
-
-    .article{
-        display: flex;
-        flex-flow: row nowrap;
-        width: 1024px;
-        border-radius: 10px;
-        border: 1px solid $color-light-gray;
-        overflow: hidden;
-
-        .img{
-            align-items: center;
-            display: flex;
-            flex-flow: column nowrap;
-            width: 50%;
-            height: 500px;
-            background-color: $color-light-gray;
-    
-            img{
-                margin: auto;
-                width: 50%;
-            }
-        }
-    
-        .size{
-            width: 50%;
-            border: none;
-        }
-    }
-}
 
 /*KEYFRAMES*/
 
@@ -404,7 +172,21 @@ body{
         }
     }
 
+    .help{
+        .titleHelp{
+            font-size: 32px;
+            font-weight: 400;
+            margin: 30px 0;
+        }
+    }
+
     .contact{
+        .titleContact{
+            font-size: 32px;
+            font-weight: 400;
+            margin: 30px 0;
+        }
+
         .article{
             width: 80%;
 
@@ -419,6 +201,12 @@ body{
     }
 
     .map{
+        .titleMap{
+            font-size: 32px;
+            font-weight: 400;
+            margin: 30px 0;
+        }
+
         .article{
             width: 80%;
             .img{
@@ -572,17 +360,6 @@ body{
         }
     }
 
-    .help{
-        .titleHelp{
-            border-top: 1px solid $color-mostaza;
-            border-bottom: 1px solid $color-mostaza;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin: 20px 0 10px;
-        }
-    }
-
     .aboutUs{
         margin: 0;
         .us{
@@ -608,14 +385,32 @@ body{
         }
     }
 
+    .help{
+        .titleHelp{
+            font-size: 20px;
+            font-weight: 300;
+            margin: 20px 0;
+        }
+        
+        .questions{
+            margin: 0 1%;
+            .box{
+                margin: 0 1%;
+                .question{
+                    margin: 10px 5px
+                }
+                .answer{
+                    margin: 10px 5px;
+                }
+            }
+        }
+    }
+
     .contact{
         .titleContact{
-            border-top: 1px solid $color-mostaza;
-            border-bottom: 1px solid $color-mostaza;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin: 30px 0;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 20px 0;
         }
 
         .article{
@@ -633,12 +428,9 @@ body{
 
     .map{
         .titleMap{
-            border-top: 1px solid $color-mostaza;
-            border-bottom: 1px solid $color-mostaza;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin: 30px 0;
+            font-size: 20px;
+            font-weight: 300;
+            margin: 20px 0;
         }
 
         .article{

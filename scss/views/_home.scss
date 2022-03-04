@@ -1,3 +1,7 @@
+.carousel{
+    @include disable-select();
+}
+
 .info{
     width: 1080px;
     display: flex;
@@ -15,6 +19,7 @@
         align-items: center;
 
         .info__icon{
+            @include disable-select();
             img{
                 width: 100px;
             }
@@ -27,6 +32,9 @@
                 text-align: center;
                 color: $color-gray;
                 font-size: 16px;
+                &::selection{
+                    @include color-inverter ($color-gray, $color-body);
+                }
             }
         }
     }
