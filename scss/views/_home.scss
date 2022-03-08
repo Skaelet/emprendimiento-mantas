@@ -78,11 +78,20 @@
                  }
             }
             p{
-                @extend .title;
                 position: absolute;
                 color: $color-body;
                 background-color: transparent;
                 background-image: none;
+                @include disable-select ();
+                width: 100vw;
+                font-size: 54px;
+                font-weight: 600;
+                font-family: $font-title;
+                letter-spacing: 2px;
+                padding: 45px 0;
+                margin: 100px 0;
+                text-transform: uppercase;
+                text-align: center;
             }
             .efectoBlur{
                 position: absolute;
@@ -116,10 +125,19 @@
 	justify-content: center;
     margin: 75px 0;
 
+    .titleHome{
+        @extend .title;
+        border-top: 4px solid #E1C760;
+	    border-bottom: 4px solid #E1C760;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 100px;
+    }
+
     .article{
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
         width: 1080px;
     }
 }

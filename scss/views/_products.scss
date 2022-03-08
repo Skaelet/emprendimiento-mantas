@@ -6,6 +6,7 @@
 	animation: fadeIn 1s ease-in 0.1s none normal;
 	animation-fill-mode: backwards;
     margin-bottom: 250px;
+    min-height: 600px;
 
     .filter{
         align-items: center;
@@ -15,7 +16,7 @@
         color: $color-gray;
         display: flex;
         flex-flow: column nowrap;
-        margin: 150px 10px 15px 10px;
+        margin: 150px 10px 80px 10px;
         padding: 0 20px;
 
         .titleFilter{
@@ -61,30 +62,36 @@
         width: 1080px;
 
         .titleProducts{
-            border-top: 2px solid $color-mostaza;
-            border-bottom: 2px solid $color-mostaza;
-            color: $color-gray;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 1.5;
-            letter-spacing: 2px;
-            margin: 50px;
-            padding: 0 10px;
-            text-transform: uppercase;
-            &::selection{
-                @include color-inverter($color-gray, $color-white);
-            }
-            b{
-                &::selection{
-                    @include color-inverter($color-gray, $color-white);
-                }
-            }
+            @extend .title;
         }
 
         .article{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .pages{
             display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            width: 75px;
+            margin-top: 50px;
+            color: $color-gray;
+            @include disable-select();
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 24px;
+                }
+            }
+            span{
+                font-size: 20px;
+                font-weight: 500;
+            }
         }
     }
 }

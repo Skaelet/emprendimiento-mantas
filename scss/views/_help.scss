@@ -6,13 +6,11 @@
 	animation-fill-mode: backwards;
 
     .titleHelp{
-        text-align: center;
-        font-size: 48px;
-        font-family: $font-title;
-        font-weight: 500;
-        color: $color-gray;
-        margin: 50px 0;
-        text-transform: uppercase;
+        @extend .title;
+        border-top: 4px solid #E1C760;
+	    border-bottom: 4px solid #E1C760;
+        font-size: 36px;
+        font-weight: 700;
     }
 
     .questions{
