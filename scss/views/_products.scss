@@ -16,7 +16,7 @@
         color: $color-gray;
         display: flex;
         flex-flow: column nowrap;
-        margin: 150px 10px 80px 10px;
+        margin: 160px 10px 80px 10px;
         padding: 0 20px;
 
         .titleFilter{
@@ -59,10 +59,12 @@
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-around;
-        width: 1080px;
 
         .titleProducts{
             @extend .title;
+            border-width: 3px;
+            font-weight: 700;
+            font-size: 24px;
         }
 
         .article{
