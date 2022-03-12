@@ -39,6 +39,13 @@
                 font-size: 16px;
                 font-weight: 500;
                 margin: 10px;
+
+                a{
+                    font-weight: 900;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
                 &::selection{
                     @include color-inverter($color-gray, $color-white);
                 }

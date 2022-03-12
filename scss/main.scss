@@ -79,6 +79,12 @@ body{
         }
     }
 
+    .help{
+        .titleHelp{
+            font-size: 28px;
+        }
+    }
+
     .contact{
         .article{
             width: 80%;
@@ -103,8 +109,7 @@ body{
     
     .popular{
         .titleHome{
-            border-top: 3px solid #E1C760;
-            border-bottom: 3px solid #E1C760;
+            border-width: 3px;
             font-size: 24px;
             font-weight: 500;
         }
@@ -112,6 +117,14 @@ body{
 
     .galery{
         width: 70vw;
+    }
+
+    .help{
+        .titleHelp{
+            border-width: 3px;
+            font-size: 24px;
+            font-weight: 500;
+        }
     }
 
     .contact{
@@ -171,8 +184,7 @@ body{
     .popular{
         margin: 25px 0;
         .titleHome{
-            border-top: 3px solid #E1C760;
-            border-bottom: 3px solid #E1C760;
+            border-width: 3px;
             font-size: 24px;
             font-weight: 500;
             padding: 10px;
@@ -199,9 +211,11 @@ body{
 
     .help{
         .titleHelp{
-            font-size: 32px;
-            font-weight: 400;
-            margin: 30px 0;
+            border-width: 3px;
+            font-size: 24px;
+            font-weight: 500;
+            padding: 10px;
+            margin-bottom: 50px;
         }
     }
 
@@ -364,8 +378,7 @@ body{
 
     .popular{
         .titleHome{
-            border-top: 2px solid #E1C760;
-            border-bottom: 2px solid #E1C760;
+            border-width: 2px;
             font-size: 20px;
             font-weight: 500;
             letter-spacing: 1px;
@@ -421,9 +434,12 @@ body{
 
     .help{
         .titleHelp{
+            border-width: 2px;
             font-size: 20px;
-            font-weight: 300;
-            margin: 20px 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 5px;
+            margin-bottom: 50px;
         }
         
         .questions{

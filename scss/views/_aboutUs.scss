@@ -41,6 +41,9 @@
             h3{
                 font-size: 48px;
                 margin-bottom: 30px;
+                &::selection{
+                    @include color-inverter($color-gray, $color-white);
+                }
             }
 
             p{
@@ -61,6 +64,9 @@
             font-size: 48px;
             font-weight: 400;
             font-family: $font-logo;
+            &::selection{
+                @include color-inverter($color-gray, $color-white);
+            }
         }
     }
 }

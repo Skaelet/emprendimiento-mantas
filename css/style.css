@@ -450,8 +450,10 @@ template {
 .galery, .products .items .article {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 2em;
-  width: 1000px; }
+  width: 1000px;
+  min-height: 1200px; }
 
 .header {
   align-items: center;
@@ -569,6 +571,9 @@ template {
       .aboutUs .us .description h3 {
         font-size: 48px;
         margin-bottom: 30px; }
+        .aboutUs .us .description h3::selection {
+          color: #FFFFFF;
+          background-color: #9E9A8A; }
       .aboutUs .us .description p {
         font-size: 18px; }
         .aboutUs .us .description p::selection {
@@ -583,6 +588,9 @@ template {
       font-size: 48px;
       font-weight: 400;
       font-family: "The Nautigal", cursive; }
+      .aboutUs .phrase span::selection {
+        color: #FFFFFF;
+        background-color: #9E9A8A; }
 
 .contact {
   color: #9E9A8A;
@@ -785,6 +793,10 @@ template {
         font-size: 16px;
         font-weight: 500;
         margin: 10px; }
+        .help .questions .box .answer a {
+          font-weight: 900; }
+          .help .questions .box .answer a:hover {
+            text-decoration: underline; }
         .help .questions .box .answer::selection {
           color: #FFFFFF;
           background-color: #9E9A8A; }
@@ -947,8 +959,7 @@ template {
   justify-content: center;
   animation: fadeIn 1s ease-in 0.1s none normal;
   animation-fill-mode: backwards;
-  margin-bottom: 250px;
-  min-height: 600px; }
+  margin-bottom: 250px; }
   .products .filter {
     align-items: center;
     background-color: #FFFFFF;
@@ -1055,6 +1066,8 @@ body {
     width: 75vw; }
   .aboutUs .us {
     width: 100vw; }
+  .help .titleHelp {
+    font-size: 28px; }
   .contact .article {
     width: 80%; }
   .map .article {
@@ -1066,12 +1079,15 @@ body {
   .sections {
     width: 100vw; }
   .popular .titleHome, .offer .titleHome {
-    border-top: 3px solid #E1C760;
-    border-bottom: 3px solid #E1C760;
+    border-width: 3px;
     font-size: 24px;
     font-weight: 500; }
   .galery, .products .items .article {
     width: 70vw; }
+  .help .titleHelp {
+    border-width: 3px;
+    font-size: 24px;
+    font-weight: 500; }
   .contact .article {
     width: 80%; }
   .map .article {
@@ -1098,8 +1114,7 @@ body {
   .popular, .offer {
     margin: 25px 0; }
     .popular .titleHome, .offer .titleHome {
-      border-top: 3px solid #E1C760;
-      border-bottom: 3px solid #E1C760;
+      border-width: 3px;
       font-size: 24px;
       font-weight: 500;
       padding: 10px;
@@ -1113,9 +1128,11 @@ body {
     font-weight: 600;
     font-size: 20px; }
   .help .titleHelp {
-    font-size: 32px;
-    font-weight: 400;
-    margin: 30px 0; }
+    border-width: 3px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px;
+    margin-bottom: 50px; }
   .contact .titleContact {
     font-size: 32px;
     font-weight: 400;
@@ -1211,8 +1228,7 @@ body {
   .popular, .offer {
     margin: 25px 0; }
     .popular .titleHome, .offer .titleHome {
-      border-top: 2px solid #E1C760;
-      border-bottom: 2px solid #E1C760;
+      border-width: 2px;
       font-size: 20px;
       font-weight: 500;
       letter-spacing: 1px;
@@ -1243,9 +1259,12 @@ body {
         font-size: 32px;
         font-weight: 300; }
   .help .titleHelp {
+    border-width: 2px;
     font-size: 20px;
-    font-weight: 300;
-    margin: 20px 0; }
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin-bottom: 50px; }
   .help .questions {
     margin: 0 1%; }
     .help .questions .box {
