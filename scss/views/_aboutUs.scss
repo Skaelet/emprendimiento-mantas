@@ -30,11 +30,11 @@
         .description{
             display: flex;
             flex-flow: column nowrap;
-            align-items: center;
+            align-items: stretch;
             justify-content: center;
             font-weight: 300;
             margin: 25px;
-            text-align: center;
+            text-align: left;
             width: 450px;
             order: 20;
 

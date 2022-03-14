@@ -447,11 +447,11 @@ template {
           .footer .div .section .icons .img img {
             width: 24px; }
 
-.galery, .products .items .article {
+.galery, .popular .galery--home, .offer .galery--home, .products .items .article {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 2em;
+  grid-gap: 4em;
   width: 1000px;
   min-height: 1200px; }
 
@@ -561,11 +561,11 @@ template {
     .aboutUs .us .description {
       display: flex;
       flex-flow: column nowrap;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
       font-weight: 300;
       margin: 25px;
-      text-align: center;
+      text-align: left;
       width: 450px;
       order: 20; }
       .aboutUs .us .description h3 {
@@ -739,7 +739,7 @@ template {
     border-bottom: 4px solid #E1C760;
     font-size: 36px;
     font-weight: 700;
-    margin: 75px; }
+    margin: 75px 0; }
   .map .article {
     display: flex;
     flex-flow: row nowrap;
@@ -819,7 +819,7 @@ template {
   width: 1080px;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: stretch;
   margin: 75px 0;
   border-radius: 5px; }
@@ -951,6 +951,12 @@ template {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 100px; }
+  .popular .galery--home, .offer .galery--home {
+    width: 1080px;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-rows: repeat(2, 1fr);
+    min-height: fit-content; }
 
 .products {
   align-items: stretch;
@@ -1062,14 +1068,20 @@ body {
     width: 100vw; }
   .popular .titleHome, .offer .titleHome {
     font-size: 28px; }
-  .galery, .products .items .article {
+  .popular .galery--home, .offer .galery--home {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .galery, .popular .galery--home, .offer .galery--home, .products .items .article {
     width: 75vw; }
   .aboutUs .us {
     width: 100vw; }
   .help .titleHelp {
     font-size: 28px; }
+  .contact .titleContact {
+    font-size: 28px; }
   .contact .article {
     width: 80%; }
+  .map .titleMap {
+    font-size: 28px; }
   .map .article {
     width: 80%; } }
 
@@ -1082,14 +1094,27 @@ body {
     border-width: 3px;
     font-size: 24px;
     font-weight: 500; }
-  .galery, .products .items .article {
+  .popular .galery--home, .offer .galery--home {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .galery, .popular .galery--home, .offer .galery--home, .products .items .article {
     width: 70vw; }
+  .aboutUs .us .description {
+    text-align: center;
+    align-items: center; }
   .help .titleHelp {
+    border-width: 3px;
+    font-size: 24px;
+    font-weight: 500; }
+  .contact .titleContact {
     border-width: 3px;
     font-size: 24px;
     font-weight: 500; }
   .contact .article {
     width: 80%; }
+  .map .titleMap {
+    border-width: 3px;
+    font-size: 24px;
+    font-weight: 500; }
   .map .article {
     width: 80%; } }
 
@@ -1119,7 +1144,9 @@ body {
       font-weight: 500;
       padding: 10px;
       margin-bottom: 50px; }
-  .galery, .products .items .article {
+    .popular .galery--home, .offer .galery--home {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .galery, .popular .galery--home, .offer .galery--home, .products .items .article {
     width: 80vw; }
   .products .filter {
     display: none; }
@@ -1127,6 +1154,9 @@ body {
     border-width: 2px;
     font-weight: 600;
     font-size: 20px; }
+  .aboutUs .us .description {
+    text-align: center;
+    align-items: center; }
   .help .titleHelp {
     border-width: 3px;
     font-size: 24px;
@@ -1134,9 +1164,11 @@ body {
     padding: 10px;
     margin-bottom: 50px; }
   .contact .titleContact {
-    font-size: 32px;
-    font-weight: 400;
-    margin: 30px 0; }
+    border-width: 3px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px;
+    margin-bottom: 50px; }
   .contact .article {
     width: 80%; }
     .contact .article .img {
@@ -1144,9 +1176,11 @@ body {
     .contact .article .form {
       width: 100%; }
   .map .titleMap {
-    font-size: 32px;
-    font-weight: 400;
-    margin: 30px 0; }
+    border-width: 3px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px;
+    margin-bottom: 50px; }
   .map .article {
     width: 80%; }
     .map .article .img {
@@ -1234,7 +1268,9 @@ body {
       letter-spacing: 1px;
       padding: 5px;
       margin-bottom: 50px; }
-  .galery, .products .items .article {
+    .popular .galery--home, .offer .galery--home {
+      justify-content: center; }
+  .galery, .popular .galery--home, .offer .galery--home, .products .items .article {
     width: 80vw; }
   .products {
     margin-bottom: 75px; }
@@ -1248,11 +1284,14 @@ body {
     margin: 0; }
     .aboutUs .us {
       width: 100%; }
-      .aboutUs .us .description h3 {
-        font-size: 32px;
-        margin-bottom: 20px; }
-      .aboutUs .us .description p {
-        font-size: 14px; }
+      .aboutUs .us .description {
+        text-align: center;
+        align-items: center; }
+        .aboutUs .us .description h3 {
+          font-size: 32px;
+          margin-bottom: 20px; }
+        .aboutUs .us .description p {
+          font-size: 14px; }
     .aboutUs .phrase {
       margin: 75px 10px; }
       .aboutUs .phrase span {
@@ -1274,9 +1313,12 @@ body {
       .help .questions .box .answer {
         margin: 10px 5px; }
   .contact .titleContact {
+    border-width: 2px;
     font-size: 20px;
-    font-weight: 300;
-    margin: 20px 0; }
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin-bottom: 50px; }
   .contact .article {
     width: 80%; }
     .contact .article .img {
@@ -1284,9 +1326,12 @@ body {
     .contact .article .form {
       width: 100%; }
   .map .titleMap {
+    border-width: 2px;
     font-size: 20px;
-    font-weight: 300;
-    margin: 20px 0; }
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px;
+    margin-bottom: 50px; }
   .map .article {
     width: 80%; }
     .map .article .img {

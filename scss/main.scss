@@ -67,6 +67,10 @@ body{
         .titleHome{
             font-size: 28px;
         }
+
+        .galery--home{
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
     }
 
     .galery{
@@ -86,12 +90,18 @@ body{
     }
 
     .contact{
+        .titleContact{
+            font-size: 28px;
+        }
         .article{
             width: 80%;
         }
     }
 
     .map{
+        .titleMap{
+            font-size: 28px;
+        }
         .article{
             width: 80%;
         }
@@ -113,10 +123,23 @@ body{
             font-size: 24px;
             font-weight: 500;
         }
+
+        .galery--home{
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
     }
 
     .galery{
         width: 70vw;
+    }
+
+    .aboutUs{
+        .us{
+            .description{
+                text-align: center;
+                align-items: center;
+            }
+        }
     }
 
     .help{
@@ -128,12 +151,23 @@ body{
     }
 
     .contact{
+        .titleContact{
+            border-width: 3px;
+            font-size: 24px;
+            font-weight: 500;
+        }
+
         .article{
             width: 80%;
         }
     }
 
     .map{
+        .titleMap{
+            border-width: 3px;
+            font-size: 24px;
+            font-weight: 500;
+        }
         .article{
             width: 80%;
         }
@@ -190,6 +224,10 @@ body{
             padding: 10px;
             margin-bottom: 50px;
         }
+
+        .galery--home{
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
     }
     
     .galery{
@@ -209,6 +247,15 @@ body{
         }
     }
 
+    .aboutUs{
+        .us{
+            .description{
+                text-align: center;
+                align-items: center;
+            }
+        }
+    }
+
     .help{
         .titleHelp{
             border-width: 3px;
@@ -221,9 +268,11 @@ body{
 
     .contact{
         .titleContact{
-            font-size: 32px;
-            font-weight: 400;
-            margin: 30px 0;
+            border-width: 3px;
+            font-size: 24px;
+            font-weight: 500;
+            padding: 10px;
+            margin-bottom: 50px;
         }
 
         .article{
@@ -241,9 +290,11 @@ body{
 
     .map{
         .titleMap{
-            font-size: 32px;
-            font-weight: 400;
-            margin: 30px 0;
+            border-width: 3px;
+            font-size: 24px;
+            font-weight: 500;
+            padding: 10px;
+            margin-bottom: 50px;
         }
 
         .article{
@@ -385,6 +436,11 @@ body{
             padding: 5px;
             margin-bottom: 50px;
         }
+
+        .galery--home{
+            justify-content: center;
+        }
+    
         margin: 25px 0;
     }
     
@@ -412,6 +468,8 @@ body{
         .us{
             width: 100%;
             .description{
+                text-align: center;
+                align-items: center;
                 h3{
                     font-size: 32px;
                     margin-bottom: 20px;
@@ -458,9 +516,12 @@ body{
 
     .contact{
         .titleContact{
+            border-width: 2px;
             font-size: 20px;
-            font-weight: 300;
-            margin: 20px 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 5px;
+            margin-bottom: 50px;
         }
 
         .article{
@@ -478,9 +539,12 @@ body{
 
     .map{
         .titleMap{
+            border-width: 2px;
             font-size: 20px;
-            font-weight: 300;
-            margin: 20px 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 5px;
+            margin-bottom: 50px;
         }
 
         .article{

@@ -6,7 +6,7 @@
     width: 1080px;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: stretch;
     margin: 75px 0;
     border-radius: 5px;
@@ -133,7 +133,18 @@
         font-weight: 700;
         margin-bottom: 100px;
     }
+
+    .galery--home{
+        @extend .galery;
+        width: 1080px;
+        justify-content: space-between;
+        grid-template-columns: repeat(auto-fill, 250px);
+        grid-template-rows: repeat(2, 1fr);
+        min-height: fit-content;
+    }
 }
+
+
 
 .offer{
     @extend .popular;
